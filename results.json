@@ -1,0 +1,56 @@
+{
+  "experiment": "Financial News Sentiment \u2192 Return Direction Classification",
+  "author": "Rohini Mallikarjunaiah",
+  "institution": "Stevens Institute of Technology",
+  "date": "2026-05-25",
+  "dataset": {
+    "total_samples": 60,
+    "train_size": 42,
+    "test_size": 18,
+    "positive_class": 30,
+    "negative_class": 30
+  },
+  "models_evaluated": [
+    {
+      "name": "Majority Baseline",
+      "accuracy": 0.4444,
+      "f1_score": 0.0,
+      "auc_roc": 0.5
+    },
+    {
+      "name": "VADER (rule-based)",
+      "accuracy": 0.7778,
+      "f1_score": 0.8182,
+      "auc_roc": 0.7625
+    },
+    {
+      "name": "TF-IDF + Logistic Regression",
+      "accuracy": 0.5,
+      "f1_score": 0.5263,
+      "auc_roc": 0.5
+    }
+  ],
+  "best_model": "VADER (rule-based)",
+  "top_bullish_terms": [
+    "reports",
+    "high",
+    "month",
+    "beats",
+    "strong",
+    "tech",
+    "target",
+    "upgrades"
+  ],
+  "top_bearish_terms": [
+    "cuts",
+    "misses",
+    "rate",
+    "collapses",
+    "weak",
+    "jobs",
+    "low",
+    "credit"
+  ],
+  "misclassified_count": 9,
+  "error_rate": 0.5
+}
